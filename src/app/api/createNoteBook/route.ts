@@ -5,6 +5,8 @@ import { generateImagePrompt,generateImage } from "@/lib/openAI";
 import { db } from "@/lib/db";
 import { $notes } from "@/lib/db/schema";
 
+export const runtime = "edge"
+
 export async function POST(req:Request){
 
     const {userId} = auth()
