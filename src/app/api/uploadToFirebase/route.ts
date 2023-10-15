@@ -21,8 +21,11 @@ try {
         imageUrl: firebase_url
     }).where(eq($notes.id, noteId))
 
+    return new NextResponse("success",{status:200})
+
 
 } catch (error) {
     console.log(error)
+    return new NextResponse("error",{status:500})
 }
 }
